@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/css/estilo.css"/>
+</head>
+
+<body>
+  <h1>Apliacación de Notas</h1>
+  <p class="special">Bienvenido {{variable}} </p>
+  <!-- <p>Nombres</p>
+  {% for nombre in variable %}
+    <p>{{nombre}}</p>
+  {% endfor %} -->
+
+  <form action="/crearnota" method="post">
+    <label for="titulo">Título de la Nota:</label><br>
+    <input type="text" name="campotitulo" value="">
+    <br>
+    <label for="cuerpo">Cuerpo de la Nota:</label><br>
+    <input type="text" name="campocuerpo" value="">
+    <input type="submit" value="Crear Nota">
+  </form>
+
+  <p>
+    {{titulo}}
+    <br>
+    {{cuerpo}}
+  </p>
+
+  <table style="width:100%">
+    <tr>
+      <td>{{titulo}}</td>
+      <td>{{cuerpo}}</td>
+    </tr>
+  </table>
+
+</body>
+</html>
